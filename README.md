@@ -317,6 +317,7 @@ CI runs those checks for pull requests and pushes to `main`. The repository's cu
 - Optional scoped attachment retrieval with strict content/size policies.
 - Per-user authorization scopes (`mail:read`, `mail:send`, `mail:manage`).
 
-## SPIRE capability recovery engineering backlog · 2026-10-26
 
-The [module engineering plan, operator runbook and 30 proposed tasks](docs/spire-capability-recovery/README.md) mirror [ASSIST-V2 engineering PR #159](https://github.com/R3almEcosystem/ASSIST-V2/pull/159) and do not authorize operations.
+## SPIRE recovery planning
+
+See [engineering tasks and runbooks](docs/spire-capability-recovery/README.md). These planning documents retain their original assessment date and do not certify current runtime readiness or independent approval. Current application behavior and later release evidence take precedence. Reconciled with main on 7 November 2026.
