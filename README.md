@@ -321,3 +321,9 @@ CI runs those checks for pull requests and pushes to `main`. The repository's cu
 ## SPIRE recovery planning
 
 See [engineering tasks and runbooks](docs/spire-capability-recovery/README.md). These planning documents retain their original assessment date and do not certify current runtime readiness or independent approval. Current application behavior and later release evidence take precedence. Reconciled with main on 7 November 2026.
+
+
+
+## Satellite engineering documentation
+
+See the [satellite engineering guide](docs/satellite/README.md) for the source-reviewed architecture, setup, API, MCP, A2A and operations references, plus the [interface manifest](docs/satellite/interface-manifest.json). Interface status distinguishes implemented handlers from proposed adapters; this documentation does not activate deployments or external actions.

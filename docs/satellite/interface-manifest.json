@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "repository": "SOVSI-Pte-Ltd/AI-Mail",
+  "component_keys": [
+    "AIMAIL"
+  ],
+  "reviewed_source_commit": "7875c433bd53cc5f8a3c2dae5eb0c32b716e66b3",
+  "reviewed_at": "2026-11-07",
+  "implementation_status": "accurate",
+  "interfaces": {
+    "api": {
+      "status": "implemented",
+      "evidence": [
+        "src/app/mcp/route.ts",
+        "src/gateway/mcp/server.ts",
+        "src/mcp/server.ts",
+        "src/lib/mcp-auth.ts",
+        "src/lib/session.ts",
+        "src/app/api/mail/send/route.ts"
+      ]
+    },
+    "mcp": {
+      "status": "implemented",
+      "evidence": [
+        "src/app/mcp/route.ts",
+        "src/mcp/server.ts",
+        "src/lib/mcp-auth.ts"
+      ],
+      "reference_specification": "https://modelcontextprotocol.io/specification/2026-07-28"
+    },
+    "a2a": {
+      "status": "planned",
+      "evidence": [],
+      "reference_specification": "https://a2a-protocol.org/v1.0.0/specification/"
+    }
+  },
+  "documentation": {
+    "index": "docs/satellite/README.md",
+    "architecture": "docs/satellite/ARCHITECTURE.md",
+    "setup": "docs/satellite/SETUP.md",
+    "api": "docs/satellite/API.md",
+    "mcp": "docs/satellite/MCP.md",
+    "a2a": "docs/satellite/A2A.md",
+    "operations": "docs/satellite/OPERATIONS.md"
+  },
+  "release_constraints": [
+    "Browser local-password login is retired (410 SOVSI_ID_REQUIRED); central SOVSI session exchange is distinct from the existing MCP OAuth issuer. Preserve both authentication boundaries. Demo replies are labeled and do not prove mailbox delivery. Do not send or mutate mail during documentation verification."
+  ],
+  "verification_scope": "Repository source and documentation; no hosted mutation, provider delivery or protocol interoperability acceptance performed."
+}
