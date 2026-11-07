@@ -316,3 +316,8 @@ CI runs those checks for pull requests and pushes to `main`. The repository's cu
 - Auditable outbound-message event logging without storing message bodies.
 - Optional scoped attachment retrieval with strict content/size policies.
 - Per-user authorization scopes (`mail:read`, `mail:send`, `mail:manage`).
+
+
+## SPIRE recovery planning
+
+See [engineering tasks and runbooks](docs/spire-capability-recovery/README.md). These planning documents retain their original assessment date and do not certify current runtime readiness or independent approval. Current application behavior and later release evidence take precedence. Reconciled with main on 7 November 2026.
