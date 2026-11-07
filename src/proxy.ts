@@ -9,8 +9,7 @@ export async function proxy(request: NextRequest) {
     const canonical=new URL(pathname+request.nextUrl.search,'https://ai-mail.sovsi.xyz');
     return NextResponse.redirect(canonical,308);
   }
-  const connectorRoute = pathname === "/mcp" || pathname === "/healthz" || pathname === "/oauth/consent" || pathname.startsWith("/.well-known/oauth-protected-resource")
-    || pathname === "/api/internal/attachment-ingest-verify";
+  const connectorRoute = pathname === "/mcp" || pathname === "/healthz" || pathname === "/oauth/consent" || pathname.startsWith("/.well-known/oauth-protected-resource");
   if (connectorRoute) return NextResponse.next(); // MCP has its own bearer authorization boundary.
   if (!["GET", "HEAD", "OPTIONS"].includes(request.method) && !isSameOriginRequest(request)) return NextResponse.json({ error: "Cross-origin requests are not allowed." }, { status: 403 });
   if (pathname === "/" || pathname === "/login" || pathname === "/identity/oauth/callback" || pathname.startsWith("/api/auth/")) return NextResponse.next();
